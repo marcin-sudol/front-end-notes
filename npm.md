@@ -6,15 +6,61 @@
 npm init -y
 ```
 
-### INSTALL PACKAGES LISTED IN DEPENDENCIES IN PACKAGE.JSON
+**install packages listed in dependencies in package.json**
 
 ```
 npm install
 ```
 
+**uninstall packages**
+
+```
+npm uninstall [packages names]
+```
+
+---
+
+# BABEL
+
+### INSTALL BABEL
+
+```
+npm install --save-dev @babel/core @babel/cli
+```
+
+**watch file**
+
+```
+npx babel ./src/script.js --watch --out-file ./script.js
+```
+
+**or add command to package.json and run command**
+
+```
+{
+  "scripts": {
+    "watch": "npx babel --watch src --out-dir . --presets react-app/prod"
+  }
+}
+
+npm run watch
+```
+
 ---
 
 # REACT
+
+### INSTALL BABEL FOR REACT PRESET
+
+```
+npm install babel-cli@6 babel-preset-react-app@3
+```
+
+**watch folder src for js/jsx files**
+
+```
+npx babel --watch src --out-dir . --presets react-app/prod
+```
 
 ### CREATE REACT APP
 
@@ -23,46 +69,9 @@ npx create-react-app [app-name]
 npm start
 ```
 
----
+**install prop-types for react**
 
-# BABEL
-
-### INSTALL BABEL FOR REACT PRESET
-
-```
-npm install babel-cli@6 babel-preset-react-app@3
-```
-
-### WATCHING FOLDER SRC FOR JSX FILES
-
-```
-npx babel --watch src --out-dir . --presets react-app/prod
-```
-
-### OR ADD COMMAND TO PACKAGE.JSON AND RUN COMMAND
-
-```
-{
-"scripts": {
-"watch": "npx babel --watch src --out-dir . --presets react-app/prod"
-}
-}
-npm run watch
-```
-
-### UNINSTALL
-
-```
-npm uninstall babel-cli babel-preset-react-app
-```
-
----
-
-# OTHER
-
-### OPTIONAL INSTALL PROP-TYPES FOR REACT
-
-_NOT REQUIRED IN CURRENT TEMPLATE, PROP-TYPES SCRIPT LOADED IN HTML_
+_not required in current template_
 
 ```
 npm install --save prop-types
