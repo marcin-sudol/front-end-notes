@@ -3,7 +3,7 @@
 **Querying elements**
 
 ```
-document/element.getElementById(id)
+document.getElementById(id)
 
 document/element.getElementsByClassName(name)    // iterable collection
 
