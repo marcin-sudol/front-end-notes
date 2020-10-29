@@ -82,9 +82,14 @@ Object.getOwnPropertyNames(object)   // list of all properties
 **Constructor's inheritance**
 
 ```
-function Parent() { }
+function Parent() {
+  ...
+}
 
-function Child() { }
+function Child() {
+  Parent.call(this);
+  ...
+}
 
 Child.prototype = Object.create(Parent.prototype);
 
