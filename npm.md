@@ -84,3 +84,23 @@ _not required in current template_
 ```
 npm install --save prop-types
 ```
+
+# HTTP SERVER
+
+**Install globally**
+
+```
+npm install -g http-server
+```
+
+**Add permission to run scripts (if needed)**
+
+```
+set-executionpolicy remotesigned
+```
+
+**Start Server**
+
+```
+http-server
+```
