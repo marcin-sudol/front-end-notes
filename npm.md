@@ -99,8 +99,8 @@ npm install -g http-server
 set-executionpolicy remotesigned
 ```
 
-**Start Server**
+**Start Server (with disabled caching)**
 
 ```
-http-server
+http-server -c-1
 ```
