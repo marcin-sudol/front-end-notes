@@ -1,0 +1,30 @@
+$color-light: hsl(46, 100%, 97%);
+$color-medium: hsl(38, 16%, 76%);
+$color-dark: hsl(34, 6%, 24%);
+$accent-light: hsl(17, 83%, 54%);
+$accent-dark: hsl(40, 4%, 14%);
+
+$font-em: "Comfortaa", cursive;
+$font-normal: "Montserrat", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-normal;
+  font-size: 1em;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
