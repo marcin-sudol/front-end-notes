@@ -1,7 +1,11 @@
+const Link = window.ReactRouterDOM.Link;
+
 const Error = () => {
   return (
     <div>
-      <button>Return to home</button>
+      <button>
+        <Link to="/">Return to home</Link>
+      </button>
     </div>
   );
 };
