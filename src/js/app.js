@@ -1,3 +1,4 @@
+import Note from "./note.js";
 import Error from "./error.js";
 
 const Router = window.ReactRouterDOM.BrowserRouter;
@@ -15,13 +16,17 @@ const App = ({ notes }) => {
       </header>
       <Switch>
         <Route exact path="/">
-          <button>
-            <Link to="/error">Go to Error</Link>
-          </button>
+          {notes.map((note, index) => (
+            <button key={index}>
+              <Link to={"/" + note}>{note}</Link>
+            </button>
+          ))}
         </Route>
-        <Route path="/error">
-          <Error />
-        </Route>
+        {notes.map((note, index) => (
+          <Route path={"/" + note} key={index}>
+            <Note note={note} />
+          </Route>
+        ))}
       </Switch>
     </Router>
   );
