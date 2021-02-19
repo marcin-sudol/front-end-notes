@@ -65,7 +65,7 @@ npm install babel-cli@6 babel-preset-react-app@3
 **watch folder src for js/jsx files**
 
 ```
-npx babel --watch src --out-dir . --presets react-app/prod
+npx babel --watch src/js --out-dir lib/js --presets react-app/prod
 ```
 
 # CREATE REACT APP
