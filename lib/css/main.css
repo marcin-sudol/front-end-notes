@@ -8,7 +8,7 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   color: inherit;
 }
@@ -19,5 +19,33 @@ a {
 
 button {
   cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#app-header {
+  font-size: 2.2rem;
+  background-color: #faf0ca;
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app-header h1 {
+  font-family: "Comfortaa", cursive;
+  color: #0d3b66;
 }
 /*# sourceMappingURL=main.css.map */

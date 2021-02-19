@@ -1,11 +1,15 @@
-$color-light: hsl(46, 100%, 97%);
-$color-medium: hsl(38, 16%, 76%);
-$color-dark: hsl(34, 6%, 24%);
-$accent-light: hsl(17, 83%, 54%);
-$accent-dark: hsl(40, 4%, 14%);
+$color-light1: #faf0ca;
+$color-light2: #f4d35e;
+$color-light3: #ee964b;
+$color-light4: #f95738;
+$color-dark: #0d3b66;
 
-$font-em: "Comfortaa", cursive;
-$font-normal: "Montserrat", sans-serif;
+$mono-light: #eee;
+$mono-medium: #bbb;
+$mono-dark: #555;
+
+$font-special: "Comfortaa", cursive;
+$font-normal: "Open Sans", sans-serif;
 
 html {
   scroll-behavior: smooth;
@@ -27,4 +31,73 @@ a {
 
 button {
   cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+}
+
+@mixin mq($breakdown) {
+  @media screen and (min-width: $breakdown) {
+    @content;
+  }
+}
+
+@mixin textbox {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 0.25em;
+}
+
+@mixin box {
+  display: inline-block;
+  margin: 0.4em;
+  padding: 0.4em;
+  border-radius: 0.4em;
+  @include mq($breakdown-sm) {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.6em;
+  }
+}
+
+@mixin pill {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 999px;
+}
+
+@mixin hover-shadow {
+  &:hover {
+    box-shadow: 0 0 5px 1px $color-medium;
+  }
+  transition: all 0.4s;
+}
+
+@mixin hover-up {
+  &:hover {
+    box-shadow: 0 6px 5px $color-medium;
+    transform: translateY(-6px);
+  }
+  transition: all 0.4s;
+}
+
+@mixin hover-bright {
+  &:hover {
+    filter: brightness(130%);
+  }
+  transition: all 0.4s;
+}
+
+@mixin hover-scale {
+  &:hover {
+    transform: scale(1.05);
+  }
+  transition: all 0.4s;
+}
+
+@mixin special {
+  font-family: $font-special;
 }
