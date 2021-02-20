@@ -14,20 +14,24 @@ const App = ({ notes }) => {
           <i className="fas fa-pencil-alt"></i> Front-End Notes
         </h1>
       </header>
-      <Switch>
-        <Route exact path="/">
-          {notes.map((note, index) => (
-            <button key={index}>
-              <Link to={"/" + note}>{note}</Link>
-            </button>
-          ))}
-        </Route>
-        {notes.map((note, index) => (
-          <Route path={"/" + note} key={index}>
-            <Note note={note} />
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <nav id="nav">
+              {notes.map((note, index) => (
+                <button key={index}>
+                  <Link to={"/" + note}>{note}</Link>
+                </button>
+              ))}
+            </nav>
           </Route>
-        ))}
-      </Switch>
+          {notes.map((note, index) => (
+            <Route path={"/" + note} key={index}>
+              <Note note={note} />
+            </Route>
+          ))}
+        </Switch>
+      </main>
     </Router>
   );
 };

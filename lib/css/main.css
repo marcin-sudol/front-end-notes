@@ -26,9 +26,12 @@ strong {
 }
 
 #app-header {
+  position: fixed;
+  top: 0;
   font-size: 2.2rem;
-  background-color: #faf0ca;
+  background-color: #ee964b;
   height: 3em;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,6 +49,32 @@ strong {
 
 #app-header h1 {
   font-family: "Comfortaa", cursive;
+  color: white;
+}
+
+main {
+  padding-top: 6em;
+}
+
+#nav {
+  font-size: 1.6rem;
+  padding: 2em;
+}
+
+#nav button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid #ee964b;
+  background-color: white;
+  border-radius: 0.4em;
+}
+
+#nav button a {
+  display: block;
+  line-height: 3em;
+  padding: 0 1em;
+  text-align: left;
   color: #0d3b66;
 }
 /*# sourceMappingURL=main.css.map */
