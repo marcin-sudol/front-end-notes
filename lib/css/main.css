@@ -25,13 +25,24 @@ strong {
   font-weight: bold;
 }
 
-#app-header {
+#header-container {
   position: fixed;
   top: 0;
-  font-size: 2.2rem;
-  background-color: #ee964b;
+  left: 0;
+  right: 0;
+  font-size: 1.6rem;
+  padding: 0.6em;
+  background-color: white;
+}
+
+#app-header {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 0.4em;
+  font-size: 1.2em;
   height: 3em;
-  width: 100%;
+  background-color: #2b2d42;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,28 +64,54 @@ strong {
 }
 
 main {
-  padding-top: 6em;
+  padding-top: 8em;
 }
 
 #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 1.6rem;
-  padding: 2em;
+  padding: 0.6em;
 }
 
 #nav button {
-  display: block;
-  width: 100%;
-  margin-bottom: 1em;
-  border: 1px solid #ee964b;
-  background-color: white;
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
   border-radius: 0.4em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+#nav button:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+#nav button:not(:last-child) {
+  margin-bottom: 0.6em;
 }
 
 #nav button a {
   display: block;
   line-height: 3em;
-  padding: 0 1em;
-  text-align: left;
-  color: #0d3b66;
+  color: #2b2d42;
+  font-weight: bold;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-transform: uppercase;
+}
+
+#nav button a .symbol-hover {
+  color: #41e2ba;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 /*# sourceMappingURL=main.css.map */

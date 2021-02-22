@@ -1,10 +1,10 @@
-$color-light1: #faf0ca;
-$color-light2: #f4d35e;
-$color-light3: #ee964b;
-$color-light4: #f95738;
-$color-dark: #0d3b66;
+$color-light1: #f7f7f9;
+$color-light2: #f7e733;
+$color-light3: #e86a92;
+$color-light4: #41e2ba;
+$color-dark: #2b2d42;
 
-$mono-light: #eee;
+$mono-light: #f3f3f3;
 $mono-medium: #bbb;
 $mono-dark: #555;
 
@@ -47,7 +47,7 @@ strong {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 1em;
-  border-radius: 0.25em;
+  border-radius: 0.4em;
 }
 
 @mixin box {
@@ -71,14 +71,14 @@ strong {
 
 @mixin hover-shadow {
   &:hover {
-    box-shadow: 0 0 5px 1px $color-medium;
+    box-shadow: 0 0 5px 1px $mono-medium;
   }
   transition: all 0.4s;
 }
 
 @mixin hover-up {
   &:hover {
-    box-shadow: 0 6px 5px $color-medium;
+    box-shadow: 0 6px 5px $mono-medium;
     transform: translateY(-6px);
   }
   transition: all 0.4s;
@@ -86,7 +86,14 @@ strong {
 
 @mixin hover-bright {
   &:hover {
-    filter: brightness(130%);
+    filter: brightness(120%);
+  }
+  transition: all 0.4s;
+}
+
+@mixin hover-dark {
+  &:hover {
+    filter: brightness(95%);
   }
   transition: all 0.4s;
 }

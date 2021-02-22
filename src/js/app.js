@@ -9,18 +9,24 @@ const Route = window.ReactRouterDOM.Route;
 const App = ({ notes }) => {
   return (
     <Router basename="/front-end-notes">
-      <header id="app-header">
-        <h1>
-          <i className="fas fa-pencil-alt"></i> Front-End Notes
-        </h1>
-      </header>
+      <div id="header-container">
+        <header id="app-header">
+          <h1>
+            <i className="fas fa-pencil-alt"></i> Front-End Notes
+          </h1>
+        </header>
+      </div>
       <main>
         <Switch>
           <Route exact path="/">
             <nav id="nav">
               {notes.map((note, index) => (
                 <button key={index}>
-                  <Link to={"/" + note}>{note}</Link>
+                  <Link to={"/" + note}>
+                    <span className="symbol-hover">&lt; </span>
+                    {note}
+                    <span className="symbol-hover"> /&gt;</span>
+                  </Link>
                 </button>
               ))}
             </nav>

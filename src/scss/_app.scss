@@ -1,15 +1,22 @@
-#app-header {
+#header-container {
   position: fixed;
   top: 0;
-  font-size: 2.2rem;
-  background-color: $color-light3;
+  left: 0;
+  right: 0;
+  font-size: 1.6rem;
+  padding: 0.6em;
+  background-color: white;
+}
+
+#app-header {
+  @include textbox;
+  font-size: 1.2em;
   height: 3em;
-  width: 100%;
+  background-color: $color-dark;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // border-bottom: 4px solid $color-dark;
   h1 {
     @include special;
     color: white;
@@ -17,25 +24,33 @@
 }
 
 main {
-  padding-top: 6em;
+  padding-top: 8em;
 }
 
 #nav {
+  display: flex;
+  flex-direction: column;
   font-size: 1.6rem;
-  padding: 2em;
+  padding: 0.6em;
   button {
-    display: block;
-    width: 100%;
-    margin-bottom: 1em;
-    border: 1px solid $color-light3;
-    background-color: white;
-    border-radius: 0.4em;
+    @include textbox;
+    @include hover-dark;
+    border: none;
+    background-color: $mono-light;
+    &:not(:last-child) {
+      margin-bottom: 0.6em;
+    }
     a {
       display: block;
       line-height: 3em;
-      padding: 0 1em;
-      text-align: left;
       color: $color-dark;
+      font-weight: bold;
+      transition: all 0.4s;
+      text-transform: uppercase;
+      .symbol-hover {
+        color: $color-light4;
+        transition: all 0.4s;
+      }
     }
   }
 }
