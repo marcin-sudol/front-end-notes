@@ -8,7 +8,7 @@ const Route = window.ReactRouterDOM.Route;
 
 const App = ({ notes }) => {
   return (
-    <Router>
+    <Router basename="/front-end-notes">
       <header id="app-header">
         <h1>
           <i className="fas fa-pencil-alt"></i> Front-End Notes
