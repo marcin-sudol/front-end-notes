@@ -11,9 +11,7 @@ const App = ({ notes }) => {
     <Router basename="/front-end-notes">
       <div id="header-container">
         <header id="app-header">
-          <h1>
-            <i className="fas fa-pencil-alt"></i> Front-End Notes
-          </h1>
+          <h1>Front-End Notes</h1>
         </header>
       </div>
       <main>
@@ -23,9 +21,9 @@ const App = ({ notes }) => {
               {notes.map((note, index) => (
                 <button key={index}>
                   <Link to={"/" + note}>
-                    <span className="symbol-hover">&lt; </span>
+                    <span className="symbol">&lt; </span>
                     {note}
-                    <span className="symbol-hover"> /&gt;</span>
+                    <span className="symbol"> /&gt;</span>
                   </Link>
                 </button>
               ))}

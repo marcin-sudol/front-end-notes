@@ -28,10 +28,17 @@ main {
 }
 
 #nav {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
+
+  @include mq($breakdown-sm) {
+    padding: 3em;
+    gap: 3em;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+    grid-auto-rows: 8em;
+  }
+
   button {
     @include textbox;
     @include hover-dark;
@@ -46,10 +53,8 @@ main {
       color: $color-dark;
       font-weight: bold;
       transition: all 0.4s;
-      text-transform: uppercase;
-      .symbol-hover {
+      .symbol {
         color: $color-light4;
-        transition: all 0.4s;
       }
     }
   }

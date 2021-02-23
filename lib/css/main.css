@@ -68,15 +68,20 @@ main {
 }
 
 #nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
+}
+
+@media screen and (min-width: 768px) {
+  #nav {
+    padding: 3em;
+    gap: 3em;
+    -ms-grid-columns: (minmax(16em, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+    grid-auto-rows: 8em;
+  }
 }
 
 #nav button {
@@ -106,12 +111,9 @@ main {
   font-weight: bold;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  text-transform: uppercase;
 }
 
-#nav button a .symbol-hover {
+#nav button a .symbol {
   color: #41e2ba;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 /*# sourceMappingURL=main.css.map */
