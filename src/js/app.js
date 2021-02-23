@@ -31,7 +31,7 @@ const App = ({ notes }) => {
           </Route>
           {notes.map((note, index) => (
             <Route path={"/" + note} key={index}>
-              <Note note={note} />
+              <Note noteTitle={note} />
             </Route>
           ))}
         </Switch>
