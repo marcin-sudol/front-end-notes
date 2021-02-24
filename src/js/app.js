@@ -5,8 +5,24 @@ const Router = window.ReactRouterDOM.BrowserRouter;
 const Switch = window.ReactRouterDOM.Switch;
 const Link = window.ReactRouterDOM.Link;
 const Route = window.ReactRouterDOM.Route;
+const useState = React.useState;
+const useEffect = React.useEffect;
 
-const App = ({ notes }) => {
+const App = (props) => {
+  const [notes, setNotes] = useState([]);
+
+  // initially set notes
+  useEffect(() => {
+    setNotes(
+      props.notes.map((note) => {
+        return {
+          title: note.split("-").join(" "),
+          name: note,
+        };
+      })
+    );
+  }, []);
+
   return (
     <Router basename="/front-end-notes">
       <div id="header-container">
@@ -20,9 +36,9 @@ const App = ({ notes }) => {
             <nav id="nav">
               {notes.map((note, index) => (
                 <button key={index}>
-                  <Link to={"/" + note}>
+                  <Link to={"/" + note.name}>
                     <span className="symbol">&lt; </span>
-                    {note}
+                    {note.title}
                     <span className="symbol"> /&gt;</span>
                   </Link>
                 </button>
@@ -30,8 +46,8 @@ const App = ({ notes }) => {
             </nav>
           </Route>
           {notes.map((note, index) => (
-            <Route path={"/" + note} key={index}>
-              <Note noteTitle={note} />
+            <Route path={"/" + note.name} key={index}>
+              <Note {...note} />
             </Route>
           ))}
         </Switch>
