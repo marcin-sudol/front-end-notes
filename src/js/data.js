@@ -1,10 +1,10 @@
 const notesList = [
-  "js classes",
-  "js dom",
-  "js functions",
-  "js objects",
-  "git basics",
-  "git remote",
+  "js-classes",
+  "js-dom",
+  "js-functions",
+  "js-objects",
+  "git-basics",
+  "git-remote",
   "npm",
 ];
 
