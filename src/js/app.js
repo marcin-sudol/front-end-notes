@@ -1,7 +1,9 @@
 import Note from "./note.js";
 import Error from "./error.js";
 
-const Router = window.ReactRouterDOM.BrowserRouter;
+// const BASENAME = "/front-end-notes";
+
+const Router = window.ReactRouterDOM.HashRouter;
 const Switch = window.ReactRouterDOM.Switch;
 const Link = window.ReactRouterDOM.Link;
 const Route = window.ReactRouterDOM.Route;
@@ -24,7 +26,7 @@ const App = (props) => {
   }, []);
 
   return (
-    <Router basename="/front-end-notes">
+    <Router>
       <div id="header-container">
         <header id="app-header">
           <h1>Front-End Notes</h1>
