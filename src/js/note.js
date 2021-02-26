@@ -8,7 +8,7 @@ export default function Note({ title, name }) {
 
   // fetch markdown file
   useEffect(() => {
-    fetch(`./../notes/${name}.md`)
+    fetch(`/notes/${name}.md`)
       .then((response) => (response.ok ? response.text() : response.error()))
       .then((data) => {
         setHtml({ __html: marked(data, { breaks: true, gfm: true }) });
