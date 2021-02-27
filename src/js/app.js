@@ -1,7 +1,4 @@
 import Note from "./note.js";
-import Error from "./error.js";
-
-// const BASENAME = "/front-end-notes";
 
 const Router = window.ReactRouterDOM.HashRouter;
 const Switch = window.ReactRouterDOM.Switch;

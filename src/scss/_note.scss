@@ -1,0 +1,52 @@
+#note-container {
+  font-size: 1.6rem;
+}
+
+#note-header {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 2px solid $color-light4;
+  h2 {
+    @include special;
+    display: inline-block;
+    font-size: 1.3em;
+  }
+
+  #return-button {
+    position: absolute;
+    left: 0.3em;
+    font-size: 1.6em;
+  }
+}
+
+#note {
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: scroll;
+
+  h3 {
+    font-size: 1.2em;
+    color: $color-light3;
+  }
+
+  p {
+    margin: 1em 0 0.4em;
+  }
+
+  strong {
+    color: $color-light4;
+  }
+
+  code {
+    display: block;
+    background-color: $mono-light;
+    font-family: $font-code;
+    padding: 0.6em;
+    margin: 0.4em 0;
+    border-radius: 0.3em;
+  }
+
+  hr {
+    border: 2px solid $mono-medium;
+  }
+}

@@ -31,17 +31,12 @@ strong {
   left: 0;
   right: 0;
   font-size: 1.6rem;
-  padding: 0.6em;
   background-color: white;
 }
 
 #app-header {
-  display: inline-block;
-  margin: 0.2em;
-  padding: 0.4em 1em;
-  border-radius: 0.4em;
   font-size: 1.2em;
-  height: 3em;
+  height: 4em;
   background-color: #2b2d42;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,8 +71,8 @@ main {
 
 @media screen and (min-width: 768px) {
   #nav {
-    padding: 3em;
-    gap: 3em;
+    padding: 1.2em;
+    gap: 1em;
     -ms-grid-columns: (minmax(16em, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
     grid-auto-rows: 8em;
@@ -115,5 +110,59 @@ main {
 
 #nav button a .symbol {
   color: #41e2ba;
+}
+
+#note-container {
+  font-size: 1.6rem;
+}
+
+#note-header {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 2px solid #41e2ba;
+}
+
+#note-header h2 {
+  font-family: "Comfortaa", cursive;
+  display: inline-block;
+  font-size: 1.3em;
+}
+
+#note-header #return-button {
+  position: absolute;
+  left: 0.3em;
+  font-size: 1.6em;
+}
+
+#note {
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+#note h3 {
+  font-size: 1.2em;
+  color: #e86a92;
+}
+
+#note p {
+  margin: 1em 0 0.4em;
+}
+
+#note strong {
+  color: #41e2ba;
+}
+
+#note code {
+  display: block;
+  background-color: #f3f3f3;
+  font-family: "Share Tech Mono", monospace;
+  padding: 0.6em;
+  margin: 0.4em 0;
+  border-radius: 0.3em;
+}
+
+#note hr {
+  border: 2px solid #bbb;
 }
 /*# sourceMappingURL=main.css.map */
