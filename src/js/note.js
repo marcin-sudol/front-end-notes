@@ -11,7 +11,7 @@ export default function Note({ title, name }) {
 
   // function for loading data
   function loadNote() {
-    fetch(`/notes/${name}.md`)
+    fetch(`./notes/${name}.md`)
       .then((response) => (response.ok ? response.text() : response.error()))
       .then((data) => {
         setHtml({ __html: marked(data, { breaks: true, gfm: true }) });
@@ -20,8 +20,6 @@ export default function Note({ title, name }) {
         setHtml({ __html: "<p>Error loading...</p>" });
       });
   }
-
-  console.log("render");
 
   return (
     <article id="note-container">
