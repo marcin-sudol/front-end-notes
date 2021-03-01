@@ -26,7 +26,9 @@ const App = (props) => {
     <Router>
       <div id="header-container">
         <header id="app-header">
-          <h1>Front-End Notes</h1>
+          <h1>
+            <Link to="/">Front-End Notes</Link>
+          </h1>
         </header>
       </div>
       <main>
@@ -34,13 +36,13 @@ const App = (props) => {
           <Route exact path="/">
             <nav id="nav">
               {notes.map((note, index) => (
-                <button key={index}>
-                  <Link to={"/" + note.name}>
+                <Link to={"/" + note.name} key={index}>
+                  <span>
                     <span className="symbol">&lt; </span>
                     {note.title}
                     <span className="symbol"> /&gt;</span>
-                  </Link>
-                </button>
+                  </span>
+                </Link>
               ))}
             </nav>
           </Route>

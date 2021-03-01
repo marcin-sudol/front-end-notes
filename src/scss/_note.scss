@@ -3,26 +3,42 @@
 }
 
 #note-header {
+  position: fixed;
+  top: 4.5em;
+  left: 0;
+  right: 0;
+  height: 4em;
   padding: 1em;
   text-align: center;
+  background-color: white;
   border-bottom: 2px solid $color-light4;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
   h2 {
     @include special;
-    display: inline-block;
+    margin: auto;
     font-size: 1.3em;
   }
 
   #return-button {
-    position: absolute;
-    left: 0.3em;
+    height: 1.5em;
+    width: 1.5em;
     font-size: 1.6em;
+    border: none;
+    border-radius: 0.2em;
+    background-color: $color-light4;
+    color: white;
   }
 }
 
 #note {
-  width: 100vw;
+  padding: 1em;
+  padding-top: 4em;
+  min-width: 100vw;
+  width: auto;
   overflow-x: scroll;
-  overflow-y: scroll;
 
   h3 {
     font-size: 1.2em;

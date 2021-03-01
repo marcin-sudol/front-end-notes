@@ -31,12 +31,13 @@ strong {
   left: 0;
   right: 0;
   font-size: 1.6rem;
+  height: 4.5em;
   background-color: white;
 }
 
 #app-header {
   font-size: 1.2em;
-  height: 4em;
+  height: 100%;
   background-color: #2b2d42;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,48 +68,48 @@ main {
   display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
+  grid-auto-rows: 5em;
+  gap: 1em;
 }
 
 @media screen and (min-width: 768px) {
   #nav {
     padding: 1.2em;
-    gap: 1em;
     -ms-grid-columns: (minmax(16em, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
     grid-auto-rows: 8em;
+    gap: 2em;
   }
 }
 
-#nav button {
-  display: inline-block;
-  margin: 0.2em;
-  padding: 0.4em 1em;
-  border-radius: 0.4em;
+#nav a {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  width: 100%;
+  height: 100%;
   border: none;
+  border-radius: 0.3em;
   background-color: #f3f3f3;
+  color: #2b2d42;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: all 0.4s;
 }
 
-#nav button:hover {
+#nav a:hover {
   -webkit-filter: brightness(95%);
           filter: brightness(95%);
 }
 
-#nav button:not(:last-child) {
-  margin-bottom: 0.6em;
-}
-
-#nav button a {
-  display: block;
-  line-height: 3em;
-  color: #2b2d42;
-  font-weight: bold;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-#nav button a .symbol {
+#nav a .symbol {
   color: #41e2ba;
 }
 
@@ -117,27 +118,52 @@ main {
 }
 
 #note-header {
+  position: fixed;
+  top: 4.5em;
+  left: 0;
+  right: 0;
+  height: 4em;
   padding: 1em;
   text-align: center;
+  background-color: white;
   border-bottom: 2px solid #41e2ba;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #note-header h2 {
   font-family: "Comfortaa", cursive;
-  display: inline-block;
+  margin: auto;
   font-size: 1.3em;
 }
 
 #note-header #return-button {
-  position: absolute;
-  left: 0.3em;
+  height: 1.5em;
+  width: 1.5em;
   font-size: 1.6em;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #41e2ba;
+  color: white;
 }
 
 #note {
-  width: 100vw;
+  padding: 1em;
+  padding-top: 4em;
+  min-width: 100vw;
+  width: auto;
   overflow-x: scroll;
-  overflow-y: scroll;
 }
 
 #note h3 {
