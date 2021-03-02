@@ -25,11 +25,9 @@ export default function Note({ title, name }) {
     <article id="note-container">
       <header id="note-header">
         <h2>{title}</h2>
-        <button id="return-button">
-          <Link to="/">
-            <i className="fas fa-arrow-left"></i>
-          </Link>
-        </button>
+        <Link to="/" id="return-link">
+          <i className="fas fa-arrow-left"></i>
+        </Link>
       </header>
       <div id="note" dangerouslySetInnerHTML={html}></div>
     </article>

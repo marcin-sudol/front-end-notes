@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -8,7 +9,7 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: inherit;
   font-size: 1em;
   color: inherit;
 }
@@ -109,7 +110,13 @@ main {
           filter: brightness(95%);
 }
 
-#nav a .symbol {
+#nav a span::before {
+  content: "< ";
+  color: #41e2ba;
+}
+
+#nav a span::after {
+  content: " />";
   color: #41e2ba;
 }
 
@@ -148,9 +155,10 @@ main {
   font-size: 1.3em;
 }
 
-#note-header #return-button {
+#note-header #return-link {
   height: 1.5em;
   width: 1.5em;
+  line-height: 1.5em;
   font-size: 1.6em;
   border: none;
   border-radius: 0.2em;
@@ -170,12 +178,12 @@ main {
   color: #e86a92;
 }
 
-#note p {
-  margin: 1em 0 0.4em;
-}
-
 #note strong {
   color: #41e2ba;
+}
+
+#note p {
+  margin: 1em 0 0.4em;
 }
 
 #note code {

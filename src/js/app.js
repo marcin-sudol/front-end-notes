@@ -37,11 +37,7 @@ const App = (props) => {
             <nav id="nav">
               {notes.map((note, index) => (
                 <Link to={"/" + note.name} key={index}>
-                  <span>
-                    <span className="symbol">&lt; </span>
-                    {note.title}
-                    <span className="symbol"> /&gt;</span>
-                  </span>
+                  <span>{note.title}</span>
                 </Link>
               ))}
             </nav>

@@ -22,9 +22,10 @@
     font-size: 1.3em;
   }
 
-  #return-button {
+  #return-link {
     height: 1.5em;
     width: 1.5em;
+    line-height: 1.5em;
     font-size: 1.6em;
     border: none;
     border-radius: 0.2em;
@@ -44,12 +45,12 @@
     color: $color-light3;
   }
 
-  p {
-    margin: 1em 0 0.4em;
-  }
-
   strong {
     color: $color-light4;
+  }
+
+  p {
+    margin: 1em 0 0.4em;
   }
 
   code {

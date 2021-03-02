@@ -53,7 +53,12 @@ main {
     justify-content: center;
     align-items: center;
     transition: all 0.4s;
-    .symbol {
+    span::before {
+      content: "< ";
+      color: $color-light4;
+    }
+    span::after {
+      content: " />";
       color: $color-light4;
     }
   }

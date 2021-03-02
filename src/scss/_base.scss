@@ -17,13 +17,14 @@ $breakdown-sm: 768px;
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: $font-normal;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $font-normal;
+  font-family: inherit;
   font-size: 1em;
   color: inherit;
 }
