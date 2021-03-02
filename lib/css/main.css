@@ -159,11 +159,10 @@ main {
 }
 
 #note {
+  display: block;
   padding: 1em;
   padding-top: 4em;
-  min-width: 100vw;
-  width: auto;
-  overflow-x: scroll;
+  overflow: auto;
 }
 
 #note h3 {
@@ -180,6 +179,7 @@ main {
 }
 
 #note code {
+  white-space: pre-wrap;
   display: block;
   background-color: #f3f3f3;
   font-family: "Share Tech Mono", monospace;
