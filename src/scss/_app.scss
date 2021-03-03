@@ -22,44 +22,10 @@
   }
 }
 
-main {
+#app-content {
   padding-top: 8em;
-}
-
-#nav {
-  display: grid;
-  font-size: 1.6rem;
-  padding: 0.6em;
-  grid-auto-rows: 5em;
-  gap: 1em;
-
-  @include mq($breakdown-sm) {
-    padding: 1.2em;
-    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
-    grid-auto-rows: 8em;
-    gap: 2em;
-  }
-
-  a {
-    @include hover-dark;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 0.3em;
-    background-color: $mono-light;
-    color: $color-dark;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.4s;
-    span::before {
-      content: "< ";
-      color: $color-light4;
-    }
-    span::after {
-      content: " />";
-      color: $color-light4;
-    }
-  }
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

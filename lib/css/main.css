@@ -60,8 +60,17 @@ strong {
   color: white;
 }
 
-main {
+#app-content {
   padding-top: 8em;
+  height: auto;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #nav {
@@ -69,6 +78,8 @@ main {
   display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
+  padding-bottom: 1em;
+  margin-bottom: auto;
   grid-auto-rows: 5em;
   gap: 1em;
 }
@@ -118,6 +129,13 @@ main {
 #nav a span::after {
   content: " />";
   color: #41e2ba;
+}
+
+#footer {
+  font-size: 1.4rem;
+  background-color: #e86a92;
+  color: white;
+  padding: 1em;
 }
 
 #note-container {
