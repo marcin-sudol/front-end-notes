@@ -1,48 +1,52 @@
-### CLONE REPOSITORY - CREATE REMOTE ORIGIN
+### Managing remote repositories
+
+Clone repository - create remote origin
 
 ```
 git clone [url] [local_name]
 ```
 
-### LIST OF REMOTE REPOSITORIES
+List of remote repositories
 
 ```
 git remote
 git remote -v               // list with urls
 ```
 
-### INSPECT REMOTE
+Inspect remote
 
 ```
 git remote show [remote]    // inspect remote
 ```
 
-### ADD REMOTE
+Add remote
 
 ```
 git remote add [remote] [url]
 ```
 
-### RENAME REMOTE
+Rename remote
 
 ```
 git remote rename [remote] [new_remote]
 ```
 
-### REMOVE REMOTE
+Remove remote
 
 ```
 git remote remove [remote]
 ```
 
-### DOWNLOAD NEW WORK FROM REMOTE
+### Working with remote
+
+Download now work from remote
 
 ```
 git fetch [remote]
 git fetch --all                                   // fetch all remotes
 ```
 
-### PUSH BRANCH TO REMOTE
+Push branch to remote
 
 ```
 git push [remote] [branch]
@@ -50,7 +54,7 @@ git push -u [remote] [branch]                     // with set-upstream option - 
 git push -u [remote] [branch]:[remote_branch]     // push branch to different name on remote
 ```
 
-### CREATE BRANCH TRACKING REMOTE BRANCH
+Create branch tracking remote branch
 
 ```
 git branch [branch] [remote]/[remote_branch]      // remote branch can be different
@@ -59,27 +63,25 @@ git checkout --track [remote]/[branch]            // same as above, but local br
 git checkout [branch]                             // same as above if branch doesn't exist locally, and exists on only one remote
 ```
 
-### SET TRACKING FOR BRANCH
+Set tracking for branch
 
 ```
 git branch -u [remote]/[branch]
 ```
 
-### INFO ABOUT TRACKING BRANCHES
+Info about tracking branches
 
 ```
 git branch -vv
 ```
 
-### REMOVE REMOTE BRANCH
+Remove remote branch
 
 ```
 git push [remote] -d [branch]
 ```
 
-### DOWNLOAD TRACKED BRANCH, AND MERGE CURRENT BRANCH WITH IT
-
-REMOTE BRANCH NEED TO BE TRACKED BY CURRENT BRANCH
+Download tracked branch and merge current branch with it. Remote branch need to be tracked by current branch
 
 ```
 git pull

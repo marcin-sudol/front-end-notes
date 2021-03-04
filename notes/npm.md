@@ -1,44 +1,44 @@
-# INITIAL
+### Initial
 
-**Create package.json**
+Create package.json
 
 ```
 npm init -y
 ```
 
-**Install packages listed in dependencies in package.json**
+Install packages listed in dependencies in package.json
 
 ```
 npm install
 ```
 
-**Uninstall packages**
+Uninstall packages
 
 ```
 npm uninstall [packages names]
 ```
 
-# BABEL TRANSPILER ES6 TO ES5
+### Babel transpiler ES6 to ES5
 
-**Install**
+Install
 
 ```
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 ```
 
-**Watch file**
+Watch file
 
 ```
 npx babel ./src/script.js --watch --out-file ./script.js --presets=@babel/preset-env
 ```
 
-**Watch directory**
+Watch directory
 
 ```
 npx babel src --watch --out-dir lib --presets=@babel/preset-env
 ```
 
-**Add command to package.json**
+Add command to package.json
 
 ```
 {
@@ -48,58 +48,56 @@ npx babel src --watch --out-dir lib --presets=@babel/preset-env
 }
 ```
 
-**Run command**
+Run command
 
 ```
 npm run watch
 ```
 
-# BABEL FOR REACT PRESET
+### Babel for React preset
 
-**Install**
+Install
 
 ```
 npm install babel-cli@6 babel-preset-react-app@3
 ```
 
-**watch folder src for js/jsx files**
+Watch folder src for js/jsx files
 
 ```
 npx babel --watch src/js --out-dir lib/js --presets react-app/prod
 ```
 
-# CREATE REACT APP
+### Create React App
 
-**Install**
+Install
 
 ```
 npx create-react-app [app-name]
 npm start
 ```
 
-**install prop-types for react**
-
-_not required in current template_
+Install prop-types for react
 
 ```
 npm install --save prop-types
 ```
 
-# HTTP SERVER
+### HTTP server
 
-**Install globally**
+Install globally
 
 ```
 npm install -g http-server
 ```
 
-**Add permission to run scripts (if needed)**
+Add permission to run scripts (if needed)
 
 ```
 set-executionpolicy remotesigned
 ```
 
-**Start Server (with disabled caching)**
+Start Server (with disabled caching)
 
 ```
 http-server -c-1

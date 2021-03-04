@@ -189,14 +189,8 @@ strong {
 #note h3 {
   font-size: 1.2em;
   color: #e86a92;
-}
-
-#note strong {
-  color: #41e2ba;
-}
-
-#note p {
-  margin: 1em 0 0.4em;
+  margin: 0.6em 0;
+  text-transform: uppercase;
 }
 
 #note code {

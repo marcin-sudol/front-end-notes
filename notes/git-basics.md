@@ -1,56 +1,53 @@
-# SETUP
+### Setup
 
-CONFIGURE GIT
+Configure Git
 
 ```
 git config --global user.name "Marcin"
 git config --global user.email marcin.sudol@outlook.com
 ```
 
-LIST CONFIGURATION
+List configuration
 
 ```
 git config --list
 ```
 
-INIT LOCAL GIT REPOSITORY
+Init local Git repository
 
 ```
 git init
 ```
 
-CREATE .GITIGNORE
+Create .gitignore
 
 ```
 touch .gitignore
 ```
 
-ADD NODE_MODULES TO .GITIGNORE
+Add node_modules to .gitignore
 
 ```
 echo "node_modules/" >> .gitignore
 ```
 
-OPTIONALLY ADD OTHER FILES TO .GITIGNORE
-
-OPTIONALLY REMOVE MODE_MODULES FROM GIT
+Optionally add other files to .gitignore
+Optionally remove node_modules from Git
 
 ```
 git rm -r --cached node_modules
 ```
 
----
+### Staging, commiting changes
 
-# STAGING, COMMITING CHANGES
-
-STAGE CHANGES (ADD FILES TO INDEX)
+Stage changes (add files to index)
 
 ```
 git add [filename]
 git add .                          // add all changed files
 ```
 
-UNSTAGE CHANGES
+Unstage changes
 
 ```
 git reset HEAD [filename]
@@ -58,51 +55,51 @@ git reset HEAD .
 git restore --staged [filename]    // newer command
 ```
 
-DISCARD CHANGES (REVERT TO LAST COMMIT)
+Discard changes (revert to last commit)
 
 ```
 git checkout -- [filename]
 git restore [filename]             // newer command
 ```
 
-COMMIT CHANGES
+Commit changes
 
 ```
 git commit
 git commit -m 'Description'
 ```
 
-COMMIT WITH STAGING ALL CHANGED FILES
+Commit with staging all changed files
 
 ```
 git commit -a -m 'Description'
 ```
 
-UPDATE (REPLACE) LAST COMMIT
+Update (replace) last commit
 
 ```
 git commit --amend
 ```
 
-REMOVE FILE FROM GIT AND DIRECTORY
+Remove file from Git and directory
 
 ```
 git rm [filename]
 ```
 
-ONLY REMOVE FILE FROM GIT
+Only remove file from Git
 
 ```
 git rm --cached [filename]
 ```
 
-RENAME FILE
+Rename file
 
 ```
 git mv [oldname] [newname]
 ```
 
-IS EQUIVALENT TO
+Is equivalent to
 
 ```
 mv mv [oldname] [newname]
@@ -110,11 +107,9 @@ git rm [oldname]
 git add [newname]
 ```
 
----
+### Branching
 
-# BRANCHING
-
-LIST BRANCHES
+List branches
 
 ```
 git branch
@@ -123,81 +118,81 @@ git branch --merged
 git branch --no-merged
 ```
 
-CREATE BRANCH
+Create branch
 
 ```
 git branch [branch]
 ```
 
-RENAME BRANCH
+Rename branch
 
 ```
 git branch -m [newname]
 git branch -m [oldname] [newname]
 ```
 
-CHANGE ACTIVE BRANCH
+Change active branch
 
 ```
 git checkout [branch]
 ```
 
-CREATE NEW BRANCH AND SWITCH TO IT
+Create new branch and switch to it
 
 ```
 git checkout -b [branch]
 ```
 
-DELETE BRANCH
+Delete branch
 
 ```
 git branch -d [branch]
 ```
 
-MERGE BRANCH - MOVE MASTER TO THAT SELECTED BRANCH
+Merge branch - move master to that selected branch
 
 ```
 git checkout master
 git merge [branch]
 ```
 
-MERGE CONFLICT
+Merge conflict
 
 ```
 git status
 ```
 
-OPEN AND EDIT FILES WITH CONFLICT
+Open and edit files with conflict
 
-CHECK IF ALL CONFLICTS HAVE BEEN RESOLVED
+Check if all conflicts have been resolved
 
 ```
 git status
 ```
 
-COMMIT CHANGES TO THAT FILES (NO NEED ADDING)
+Commit changes to that files (no need adding)
 
 ```
 git commit -m 'Description'
 ```
 
-OR USE MERGETOOL
+Or use mergetool
 
-REBASE
+Rebase
 
-REBASE CURRENT BRANCH ON TOP OF MASTER
+Rebase current branch on top of master
 
 ```
 git rebase master
 ```
 
-REBASE ANY BRANCH ON TO OF MASTER
+Rebase any branch on to of master
 
 ```
 git rebase master [branch]
 ```
 
-REBASE ONTO
+Rebase onto
 
 Takes commit whose parent is oldparent and sets its parent to newparent.
 
@@ -206,11 +201,9 @@ git rebase --onto [newparent] [oldparent]
 git rebase --onto [newparent] [oldparent] [until]
 ```
 
----
+### Other
 
-# OTHER
-
-TAGGING
+Tagging
 
 ```
 git tag
@@ -220,27 +213,27 @@ git show v1.0                                   // show tag
 git tag -d v1.0                                 // remove tag
 ```
 
-CREATE ALIAS
+Create alias
 
 ```
 git config --global alias.lo 'log --oneline --decorate --graph --all'
 ```
 
-STATUS
+Status
 
 ```
 git status
 git statis -s
 ```
 
-DIFF
+Diff
 
 ```
 git diff                                        // compare current state to staging
 git diff --staged                               // compare staging to last commit
 ```
 
-LOG
+Log
 
 ```
 git log

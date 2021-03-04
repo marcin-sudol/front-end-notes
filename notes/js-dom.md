@@ -1,6 +1,4 @@
-# DOM
-
-**Querying elements**
+### Querying elements
 
 ```
 document.getElementById(id)
@@ -28,7 +26,7 @@ document.images
 ...
 ```
 
-**Modifying elements**
+### Modifying elements
 
 ```
 document.createElement(element)
@@ -56,7 +54,7 @@ element.setAttribute(attribute, value)
 element.style.property = value
 ```
 
-**Adding events**
+### Adding events
 
 ```
 element.onload = myFunction                       // events name with "on"
@@ -89,7 +87,7 @@ window.addEventListener("resize", myFunction)     // can add event listener to o
 
 ```
 
-**Nodes**
+### Nodes
 
 ```
 node.parentNode

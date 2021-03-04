@@ -36,7 +36,7 @@ Object.values(obj)              // converts values into array
 JSON.stringify(obj)             // converts object into string
 ```
 
-**Object's constructor**
+### Object's constructor
 
 ```
 function Person(first, last, weight) {
@@ -59,7 +59,7 @@ function Person(first, last, weight) {
 }
 ```
 
-**Constructor's prototype**
+### Constructor's prototype
 
 ```
 Person.prototype.nationality = "English";
@@ -73,13 +73,13 @@ Every object is linked to constructor's prototype. If prototype is assigned to n
 
 Object can have property named the same as prototype's property. In that case object's property has priority, when accessing that property's name.
 
-**Constructor's methods**
+### Constructor's methods
 
 ```
 Object.getOwnPropertyNames(object)   // list of all properties
 ```
 
-**Constructor's inheritance**
+### Constructor's inheritance
 
 ```
 function Parent() {
