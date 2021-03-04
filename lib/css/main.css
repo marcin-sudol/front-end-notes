@@ -26,19 +26,13 @@ strong {
   font-weight: bold;
 }
 
-#header-container {
+#app-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   font-size: 1.6rem;
   height: 4.5em;
-  background-color: white;
-}
-
-#app-header {
-  font-size: 1.2em;
-  height: 100%;
   background-color: #2b2d42;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,6 +51,7 @@ strong {
 
 #app-header h1 {
   font-family: "Comfortaa", cursive;
+  font-size: 1.2em;
   color: white;
 }
 

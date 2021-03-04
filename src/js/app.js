@@ -24,13 +24,12 @@ const App = (props) => {
 
   return (
     <Router>
-      <div id="header-container">
-        <header id="app-header">
-          <h1>
-            <Link to="/">Front-End Notes</Link>
-          </h1>
-        </header>
-      </div>
+      <header id="app-header">
+        <h1>
+          <Link to="/">Front-End Notes</Link>
+        </h1>
+      </header>
+
       <main id="app-content">
         <Switch>
           <Route exact path="/">
