@@ -1,4 +1,2 @@
 add error page
-add README
 change colors
-consistent headers in note
