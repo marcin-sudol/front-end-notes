@@ -1,5 +1,5 @@
 import Note from "./note.js";
-
+import Error from "./error.js";
 const Router = window.ReactRouterDOM.HashRouter;
 const Switch = window.ReactRouterDOM.Switch;
 const Link = window.ReactRouterDOM.Link;
@@ -58,6 +58,9 @@ const App = (props) => {
               <Note {...note} />
             </Route>
           ))}
+          <Route path="*">
+            <Error />
+          </Route>
         </Switch>
       </main>
     </Router>

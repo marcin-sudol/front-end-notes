@@ -25,7 +25,7 @@ export default function Note({ title, name }) {
     <article id="note-container">
       <header id="note-header">
         <h2>{title}</h2>
-        <Link to="/" id="return-link">
+        <Link to="/" id="note-return-link">
           <i className="fas fa-arrow-left"></i>
         </Link>
       </header>

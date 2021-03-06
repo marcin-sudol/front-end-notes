@@ -1,11 +1,12 @@
 const Link = window.ReactRouterDOM.Link;
 
-export default Error = () => {
+export default function Error() {
   return (
-    <div>
-      <button>
-        <Link to="/">Return to home</Link>
-      </button>
-    </div>
+    <section id="error">
+      <h3 id="error-header">Page not found</h3>
+      <Link to="/" id="error-return-link">
+        Return to homepage
+      </Link>
+    </section>
   );
-};
+}

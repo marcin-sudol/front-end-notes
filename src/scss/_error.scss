@@ -1,0 +1,23 @@
+#error {
+  font-size: 1.6rem;
+  padding: 1em;
+  flex-grow: 1;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 1em;
+  align-content: space-around;
+  place-items: center;
+}
+
+#error-header {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: $mono-dark;
+  margin: auto;
+}
+
+#error-return-link {
+  @include textbox;
+  background-color: $color-light4;
+  font-size: 1.2em;
+}

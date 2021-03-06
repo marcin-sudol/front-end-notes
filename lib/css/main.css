@@ -131,6 +131,7 @@ strong {
   background-color: #e86a92;
   color: white;
   padding: 1em;
+  padding-bottom: 2em;
 }
 
 #note-container {
@@ -168,7 +169,7 @@ strong {
   font-size: 1.3em;
 }
 
-#note-header #return-link {
+#note-header #note-return-link {
   height: 1.5em;
   width: 1.5em;
   line-height: 1.5em;
@@ -205,5 +206,37 @@ strong {
 
 #note hr {
   border: 2px solid #bbb;
+}
+
+#error {
+  font-size: 1.6rem;
+  padding: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+  gap: 1em;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  place-items: center;
+}
+
+#error-header {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #555;
+  margin: auto;
+}
+
+#error-return-link {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 0.4em;
+  background-color: #41e2ba;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=main.css.map */
