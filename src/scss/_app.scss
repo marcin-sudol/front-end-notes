@@ -21,5 +21,12 @@
 }
 
 #app-content {
-  overflow: auto;
+  /* Scroll with scrollbars hidden */
+  overflow: scroll;
+  /* Hide scrollbars in Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* Hide scrollbars in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbars in Firefox */
 }

@@ -36,7 +36,15 @@
 #note-content {
   padding: 1em;
   padding-top: 0;
-  overflow: auto;
+
+  /* Scroll with scrollbars hidden */
+  overflow: scroll;
+  /* Hide scrollbars in Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* Hide scrollbars in IE and Edge */
+  scrollbar-width: none; /* Hide scrollbars in Firefox */
 
   h3 {
     font-size: 1.2em;

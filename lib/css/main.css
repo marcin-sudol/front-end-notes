@@ -61,7 +61,17 @@ strong {
 }
 
 #app-content {
-  overflow: auto;
+  /* Scroll with scrollbars hidden */
+  overflow: scroll;
+  /* Hide scrollbars in Chrome, Safari and Opera */
+  -ms-overflow-style: none;
+  /* Hide scrollbars in IE and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbars in Firefox */
+}
+
+#app-content::-webkit-scrollbar {
+  display: none;
 }
 
 #home {
@@ -192,7 +202,17 @@ strong {
 #note-content {
   padding: 1em;
   padding-top: 0;
-  overflow: auto;
+  /* Scroll with scrollbars hidden */
+  overflow: scroll;
+  /* Hide scrollbars in Chrome, Safari and Opera */
+  -ms-overflow-style: none;
+  /* Hide scrollbars in IE and Edge */
+  scrollbar-width: none;
+  /* Hide scrollbars in Firefox */
+}
+
+#note-content::-webkit-scrollbar {
+  display: none;
 }
 
 #note-content h3 {
