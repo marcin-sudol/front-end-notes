@@ -1,43 +1,41 @@
-#note-container {
+#note {
+  height: 100%;
   font-size: 1.6rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 #note-header {
-  position: fixed;
-  top: 4.5em;
-  left: 0;
-  right: 0;
   height: 4em;
   padding: 1em;
-  text-align: center;
   background-color: white;
   border-bottom: 2px solid $color-light4;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  text-align: center;
   h2 {
     @include special;
     margin: auto;
     font-size: 1.3em;
   }
-
-  #note-return-link {
-    height: 1.5em;
-    width: 1.5em;
-    line-height: 1.5em;
-    font-size: 1.6em;
-    border: none;
-    border-radius: 0.2em;
-    background-color: $color-light4;
-    color: white;
-  }
 }
 
-#note {
-  display: block;
+#note-return-link {
+  height: 1.5em;
+  width: 1.5em;
+  line-height: 1.5em;
+  font-size: 1.6em;
+  border: none;
+  border-radius: 0.2em;
+  background-color: $color-light4;
+  color: white;
+}
+
+#note-content {
   padding: 1em;
-  padding-top: 4em;
+  padding-top: 0;
   overflow: auto;
 
   h3 {

@@ -1,8 +1,10 @@
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 #app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   font-size: 1.6rem;
   height: 4.5em;
   background-color: $color-dark;
@@ -14,13 +16,10 @@
     @include special;
     font-size: 1.2em;
     color: white;
+    text-align: center;
   }
 }
 
 #app-content {
-  padding-top: 8em;
-  height: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  overflow: auto;
 }

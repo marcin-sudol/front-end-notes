@@ -1,9 +1,15 @@
+#home {
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 #nav {
   display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
-  padding-bottom: 1em;
-  margin-bottom: auto;
   grid-auto-rows: 5em;
   gap: 1em;
 
@@ -43,5 +49,4 @@
   background-color: $color-light3;
   color: white;
   padding: 1em;
-  padding-bottom: 2em;
 }

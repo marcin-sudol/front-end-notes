@@ -26,11 +26,15 @@ strong {
   font-weight: bold;
 }
 
+#root {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+}
+
 #app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   font-size: 1.6rem;
   height: 4.5em;
   background-color: #2b2d42;
@@ -53,12 +57,16 @@ strong {
   font-family: "Comfortaa", cursive;
   font-size: 1.2em;
   color: white;
+  text-align: center;
 }
 
 #app-content {
-  padding-top: 8em;
+  overflow: auto;
+}
+
+#home {
   height: auto;
-  min-height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,6 +74,9 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #nav {
@@ -73,8 +84,6 @@ strong {
   display: grid;
   font-size: 1.6rem;
   padding: 0.6em;
-  padding-bottom: 1em;
-  margin-bottom: auto;
   grid-auto-rows: 5em;
   gap: 1em;
 }
@@ -131,21 +140,20 @@ strong {
   background-color: #e86a92;
   color: white;
   padding: 1em;
-  padding-bottom: 2em;
 }
 
-#note-container {
+#note {
+  height: 100%;
   font-size: 1.6rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
 }
 
 #note-header {
-  position: fixed;
-  top: 4.5em;
-  left: 0;
-  right: 0;
   height: 4em;
   padding: 1em;
-  text-align: center;
   background-color: white;
   border-bottom: 2px solid #41e2ba;
   display: -webkit-box;
@@ -161,6 +169,7 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 #note-header h2 {
@@ -169,7 +178,7 @@ strong {
   font-size: 1.3em;
 }
 
-#note-header #note-return-link {
+#note-return-link {
   height: 1.5em;
   width: 1.5em;
   line-height: 1.5em;
@@ -180,21 +189,20 @@ strong {
   color: white;
 }
 
-#note {
-  display: block;
+#note-content {
   padding: 1em;
-  padding-top: 4em;
+  padding-top: 0;
   overflow: auto;
 }
 
-#note h3 {
+#note-content h3 {
   font-size: 1.2em;
   color: #e86a92;
   margin: 0.6em 0;
   text-transform: uppercase;
 }
 
-#note code {
+#note-content code {
   white-space: pre-wrap;
   display: block;
   background-color: #f3f3f3;
@@ -204,23 +212,19 @@ strong {
   border-radius: 0.3em;
 }
 
-#note hr {
+#note-content hr {
   border: 2px solid #bbb;
 }
 
 #error {
-  font-size: 1.6rem;
+  height: 100%;
   padding: 1em;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  font-size: 1.6rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr auto 1fr;
       grid-template-rows: 1fr auto 1fr;
   gap: 1em;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
   place-items: center;
 }
 
@@ -228,7 +232,8 @@ strong {
   font-size: 1.2em;
   font-weight: 100;
   color: #555;
-  margin: auto;
+  font-style: italic;
+  text-align: center;
 }
 
 #error-return-link {
@@ -238,5 +243,6 @@ strong {
   border-radius: 0.4em;
   background-color: #41e2ba;
   font-size: 1.2em;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

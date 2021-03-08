@@ -22,14 +22,14 @@ export default function Note({ title, name }) {
   }
 
   return (
-    <article id="note-container">
+    <article id="note">
       <header id="note-header">
         <h2>{title}</h2>
         <Link to="/" id="note-return-link">
           <i className="fas fa-arrow-left"></i>
         </Link>
       </header>
-      <div id="note" dangerouslySetInnerHTML={html}></div>
+      <div id="note-content" dangerouslySetInnerHTML={html}></div>
     </article>
   );
 }
