@@ -54,8 +54,8 @@ strong {
 }
 
 #app-header h1 {
-  font-family: "Comfortaa", cursive;
-  font-size: 1.2em;
+  font-family: "Bree Serif", serif;
+  font-size: 1.5em;
   color: white;
   text-align: center;
 }
@@ -183,9 +183,9 @@ strong {
 }
 
 #note-header h2 {
-  font-family: "Comfortaa", cursive;
   margin: auto;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  text-transform: capitalize;
 }
 
 #note-return-link {
@@ -216,17 +216,18 @@ strong {
 }
 
 #note-content h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #e86a92;
   margin: 0.6em 0;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
 #note-content code {
   white-space: pre-wrap;
   display: block;
   background-color: #f3f3f3;
-  font-family: "Share Tech Mono", monospace;
+  font-family: "DM Mono", monospace;
   padding: 0.6em;
   margin: 0.4em 0;
   border-radius: 0.3em;
