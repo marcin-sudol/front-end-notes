@@ -37,7 +37,7 @@ strong {
 #app-header {
   font-size: 1.6rem;
   height: 4.5em;
-  background-color: #2b2d42;
+  background-color: #554348;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,8 +116,9 @@ strong {
   border: none;
   border-radius: 0.3em;
   background-color: #f3f3f3;
-  color: #2b2d42;
+  color: #554348;
   font-weight: bold;
+  text-transform: capitalize;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,18 +138,17 @@ strong {
 
 #nav a span::before {
   content: "< ";
-  color: #41e2ba;
+  color: #b5e99b;
 }
 
 #nav a span::after {
   content: " />";
-  color: #41e2ba;
+  color: #b5e99b;
 }
 
 #footer {
   font-size: 1.4rem;
-  background-color: #e86a92;
-  color: white;
+  background-color: #b5e99b;
   padding: 1em;
 }
 
@@ -165,7 +165,7 @@ strong {
   height: 4em;
   padding: 1em;
   background-color: white;
-  border-bottom: 2px solid #41e2ba;
+  border-bottom: 2px solid #32864c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,17 +186,24 @@ strong {
   margin: auto;
   font-size: 1.2em;
   text-transform: capitalize;
+  color: #554348;
 }
 
 #note-return-link {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   height: 1.5em;
   width: 1.5em;
   line-height: 1.5em;
   font-size: 1.6em;
   border: none;
   border-radius: 0.2em;
-  background-color: #41e2ba;
-  color: white;
+  background-color: #b5e99b;
+}
+
+#note-return-link:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
 }
 
 #note-content {
@@ -217,16 +224,16 @@ strong {
 
 #note-content h3 {
   font-size: 1.1em;
-  color: #e86a92;
+  color: #32864c;
   margin: 0.6em 0;
   text-transform: uppercase;
-  font-weight: normal;
 }
 
 #note-content code {
   white-space: pre-wrap;
   display: block;
   background-color: #f3f3f3;
+  color: #554348;
   font-family: "DM Mono", monospace;
   padding: 0.6em;
   margin: 0.4em 0;
@@ -262,8 +269,15 @@ strong {
   margin: 0.2em;
   padding: 0.4em 1em;
   border-radius: 0.4em;
-  background-color: #41e2ba;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #b5e99b;
   font-size: 1.2em;
   text-align: center;
+}
+
+#error-return-link:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
 }
 /*# sourceMappingURL=main.css.map */

@@ -29,24 +29,24 @@
     background-color: $mono-light;
     color: $color-dark;
     font-weight: bold;
+    text-transform: capitalize;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.4s;
     span::before {
       content: "< ";
-      color: $color-light4;
+      color: $color-light;
     }
     span::after {
       content: " />";
-      color: $color-light4;
+      color: $color-light;
     }
   }
 }
 
 #footer {
   font-size: 1.4rem;
-  background-color: $color-light3;
-  color: white;
+  background-color: $color-light;
   padding: 1em;
 }

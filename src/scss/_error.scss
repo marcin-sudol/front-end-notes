@@ -11,14 +11,15 @@
 #error-header {
   font-size: 1.2em;
   font-weight: 100;
-  color: $mono-dark;
+  color: $color-dark;
   font-style: italic;
   text-align: center;
 }
 
 #error-return-link {
   @include textbox;
-  background-color: $color-light4;
+  @include hover-dark;
+  background-color: $color-light;
   font-size: 1.2em;
   text-align: center;
 }

@@ -1,8 +1,7 @@
-$color-light1: #f7f7f9;
-$color-light2: #f7e733;
-$color-light3: #e86a92;
-$color-light4: #41e2ba;
-$color-dark: #2b2d42;
+$color-light: #b5e99b;
+$color-medium: #32864c;
+$color-dark: #554348;
+$color-code: #554348;
 
 $mono-light: #f3f3f3;
 $mono-medium: #bbb;
@@ -90,7 +89,7 @@ strong {
 
 @mixin hover-bright {
   &:hover {
-    filter: brightness(120%);
+    filter: brightness(110%);
   }
   transition: all 0.4s;
 }

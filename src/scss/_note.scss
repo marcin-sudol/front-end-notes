@@ -9,7 +9,7 @@
   height: 4em;
   padding: 1em;
   background-color: white;
-  border-bottom: 2px solid $color-light4;
+  border-bottom: 2px solid $color-medium;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -19,18 +19,19 @@
     margin: auto;
     font-size: 1.2em;
     text-transform: capitalize;
+    color: $color-dark;
   }
 }
 
 #note-return-link {
+  @include hover-dark;
   height: 1.5em;
   width: 1.5em;
   line-height: 1.5em;
   font-size: 1.6em;
   border: none;
   border-radius: 0.2em;
-  background-color: $color-light4;
-  color: white;
+  background-color: $color-light;
 }
 
 #note-content {
@@ -48,16 +49,16 @@
 
   h3 {
     font-size: 1.1em;
-    color: $color-light3;
+    color: $color-medium;
     margin: 0.6em 0;
     text-transform: uppercase;
-    font-weight: normal;
   }
 
   code {
     white-space: pre-wrap;
     display: block;
     background-color: $mono-light;
+    color: $color-code;
     font-family: $font-code;
     padding: 0.6em;
     margin: 0.4em 0;
