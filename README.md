@@ -2,6 +2,6 @@
 
 _Simple page created to store my notes on javascript, git and npm_
 
-- Created with React
+- Created with React functional components
 - Uses simple hooks (`useState`, `useEffect`) and React Router
 - Uses `fetch` function to load notes kept in md files
