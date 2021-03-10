@@ -107,7 +107,7 @@ git rm [oldname]
 git add [newname]
 ```
 
-### Branching
+### Branches
 
 List branches
 
@@ -149,6 +149,8 @@ Delete branch
 git branch -d [branch]
 ```
 
+### Merge
+
 Merge branch - move master to that selected branch
 
 ```
@@ -178,7 +180,7 @@ git commit -m 'Description'
 
 Or use mergetool
 
-Rebase
+### Rebase
 
 Rebase current branch on top of master
 
@@ -186,14 +188,13 @@ Rebase current branch on top of master
 git rebase master
 ```
 
-Rebase any branch on to of master
+Rebase any branch on top of master
 
 ```
 git rebase master [branch]
 ```
 
 Rebase onto
-
 Takes commit whose parent is oldparent and sets its parent to newparent.
 
 ```
@@ -201,7 +202,7 @@ git rebase --onto [newparent] [oldparent]
 git rebase --onto [newparent] [oldparent] [until]
 ```
 
-### Other
+### Other
 
 Tagging
 
