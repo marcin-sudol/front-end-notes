@@ -11,12 +11,13 @@ export default function Home({ notes }) {
         ))}
       </nav>
       <footer id="footer">
+        <h2>Backstory</h2>
         <p>
           While learning javascript and git, I wrote several markdown files, so
           I could quickly look into them if I need to. I also wrote down some
-          npm commands that I was using. Some time later, I thought it would be
-          nice to have all the notes easy accessible from a single webpage. So I
-          created this page.
+          npm commands that I was often using. Some time later, I thought it
+          would be nice to have all the notes easy accessible from a single
+          webpage. So I created this page.
         </p>
       </footer>
     </div>

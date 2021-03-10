@@ -148,8 +148,15 @@ strong {
 
 #footer {
   font-size: 1.4rem;
+  text-align: center;
+  color: #554348;
   background-color: #b5e99b;
   padding: 1em;
+}
+
+#footer h2 {
+  margin: 0.4em 0;
+  text-transform: uppercase;
 }
 
 #note {
@@ -199,6 +206,7 @@ strong {
   border: none;
   border-radius: 0.2em;
   background-color: #b5e99b;
+  color: #554348;
 }
 
 #note-return-link:hover {
