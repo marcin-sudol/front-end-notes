@@ -49,9 +49,16 @@
   scrollbar-width: none; /* Hide scrollbars in Firefox */
 
   h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: $color-medium;
-    margin: 0.6em 0;
+    margin: 0.8em 0;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 1.1em;
+    color: $color-dark;
+    margin: 0.8em 0;
     text-transform: uppercase;
   }
 
