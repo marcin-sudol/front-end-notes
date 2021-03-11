@@ -34,6 +34,12 @@ Install prop-types for react
 npm install prop-types
 ```
 
+Install React Router
+
+```
+npm install react-router-dom
+```
+
 #### Deploy to Github Pages
 
 Install gh-pages

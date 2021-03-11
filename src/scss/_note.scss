@@ -52,7 +52,9 @@
     font-size: 1.2em;
     color: $color-medium;
     margin: 0.8em 0;
+    padding: 0.6em 0;
     text-transform: uppercase;
+    border-bottom: 1px solid $mono-medium;
   }
 
   h4 {
