@@ -18,6 +18,66 @@ Uninstall packages
 npm uninstall [packages names]
 ```
 
+### Create React App
+
+Install
+
+```
+npx create-react-app app-name
+cd app-name
+npm start
+```
+
+Install prop-types for react
+
+```
+npm install prop-types
+```
+
+#### Deploy to Github Pages
+
+Install gh-pages
+
+```
+npm install --save-dev gh-pages
+```
+
+Update package.json
+
+```
+"homepage": "http://your-username.github.io/repo-name",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+Add empty GitHub repository
+
+```
+git remote add origin https://github.com/your-username/repo-name.git
+```
+
+Deploy
+
+```
+npm run deploy
+```
+
+### Babel for React preset
+
+Install
+
+```
+npm install babel-cli@6 babel-preset-react-app@3
+```
+
+Watch folder src for js/jsx files
+
+```
+npx babel --watch src/js --out-dir lib/js --presets react-app/prod
+```
+
 ### Babel transpiler ES6 to ES5
 
 Install
@@ -41,10 +101,8 @@ npx babel src --watch --out-dir lib --presets=@babel/preset-env
 Add command to package.json
 
 ```
-{
-  "scripts": {
-    "watch": "npx babel src --watch --out-dir lib --presets=@babel/preset-env"
-  }
+"scripts": {
+  "watch": "npx babel src --watch --out-dir lib --presets=@babel/preset-env"
 }
 ```
 
@@ -52,35 +110,6 @@ Run command
 
 ```
 npm run watch
-```
-
-### Babel for React preset
-
-Install
-
-```
-npm install babel-cli@6 babel-preset-react-app@3
-```
-
-Watch folder src for js/jsx files
-
-```
-npx babel --watch src/js --out-dir lib/js --presets react-app/prod
-```
-
-### Create React App
-
-Install
-
-```
-npx create-react-app [app-name]
-npm start
-```
-
-Install prop-types for react
-
-```
-npm install --save prop-types
 ```
 
 ### HTTP server
