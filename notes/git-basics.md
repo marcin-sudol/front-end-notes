@@ -3,8 +3,8 @@
 Configure Git
 
 ```
-git config --global user.name "Marcin"
-git config --global user.email marcin.sudol@outlook.com
+git config --global user.name "username"
+git config --global user.email username@example.com
 ```
 
 List configuration
