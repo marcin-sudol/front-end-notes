@@ -9,11 +9,11 @@
 }
 
 #error-header {
+  @include special;
   font-size: 1.2em;
-  font-weight: 100;
   color: $color-dark;
-  font-style: italic;
   text-align: center;
+  text-decoration: underline;
 }
 
 #error-return-link {

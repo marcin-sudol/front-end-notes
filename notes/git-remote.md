@@ -81,7 +81,7 @@ Remove remote branch
 git push [remote] -d [branch]
 ```
 
-Download tracked branch and merge current branch with it. Remote branch need to be tracked by current branch
+Download tracked branch and merge current branch with it. Remote branch needs to be tracked by current branch
 
 ```
 git pull

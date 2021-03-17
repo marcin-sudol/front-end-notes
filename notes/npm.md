@@ -28,16 +28,30 @@ cd app-name
 npm start
 ```
 
-Install prop-types for react
+#### Various dependencies
+
+React Router
+
+```
+npm install react-router-dom
+```
+
+prop-types
 
 ```
 npm install prop-types
 ```
 
-Install React Router
+Scss preprocessor
 
 ```
-npm install react-router-dom
+npm install node-sass
+```
+
+React icons
+
+```
+npm install react-icons
 ```
 
 #### Deploy to Github Pages
