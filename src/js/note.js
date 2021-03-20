@@ -3,22 +3,30 @@ const useState = React.useState;
 const useEffect = React.useEffect;
 
 export default function Note({ title, name }) {
-  // inner html
   const [html, setHtml] = useState({ __html: "<p>Loading...</p>" });
+  const [fetchController, setFetchController] = useState(new AbortController());
 
-  // load note
-  useEffect(loadNote, []);
+  // on mounting load note, on unmounting abort loading
+  useEffect(() => {
+    loadNote();
+    return abortLoading;
+  }, []);
 
-  // function for loading data
   function loadNote() {
-    fetch(`./notes/${name}.md`)
+    fetch(`./notes/${name}.md`, { signal: fetchController.signal })
       .then((response) => (response.ok ? response.text() : response.error()))
       .then((data) => {
         setHtml({ __html: marked(data, { breaks: true, gfm: true }) });
       })
       .catch(() => {
-        setHtml({ __html: "<p>Error loading...</p>" });
+        if (!fetchController.signal.aborted) {
+          setHtml({ __html: "<p>Error loading...</p>" });
+        }
       });
+  }
+
+  function abortLoading() {
+    fetchController.abort();
   }
 
   return (
