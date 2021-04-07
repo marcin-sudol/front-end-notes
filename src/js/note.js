@@ -33,7 +33,7 @@ export default function Note({ title, name }) {
     <article id="note">
       <header id="note-header">
         <h2>{title}</h2>
-        <Link to="/" id="note-return-link">
+        <Link to="/" id="note-return-link" aria-label="Return to homepage">
           <i className="fas fa-arrow-left"></i>
         </Link>
       </header>

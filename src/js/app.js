@@ -27,7 +27,9 @@ const App = (props) => {
     <Router>
       <header id="app-header">
         <h1>
-          <Link to="/">Front-End Notes</Link>
+          <Link to="/" aria-label="Return to homepage">
+            Front-End Notes
+          </Link>
         </h1>
       </header>
 
