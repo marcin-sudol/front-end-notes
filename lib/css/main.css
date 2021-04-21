@@ -146,19 +146,6 @@ strong {
   color: #b5e99b;
 }
 
-#footer {
-  font-size: 1.3rem;
-  text-align: center;
-  color: #554348;
-  background-color: #b5e99b;
-  padding: 1em;
-}
-
-#footer h2 {
-  margin: 0.4em 0;
-  text-transform: uppercase;
-}
-
 #note {
   height: 100%;
   font-size: 1.6rem;
