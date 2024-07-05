@@ -1,10 +1,10 @@
 import Home from "./home.js";
 import Note from "./note.js";
 import Error from "./error.js";
-const Router = window.ReactRouterDOM.HashRouter;
-const Switch = window.ReactRouterDOM.Switch;
-const Link = window.ReactRouterDOM.Link;
-const Route = window.ReactRouterDOM.Route;
+const Router = ReactRouterDOM.HashRouter;
+const Routes = ReactRouterDOM.Routes;
+const Route = ReactRouterDOM.Route;
+const Link = ReactRouterDOM.Link;
 const useState = React.useState;
 const useEffect = React.useEffect;
 
@@ -34,24 +34,20 @@ const App = (props) => {
       </header>
 
       <main id="app-content">
-        <Switch>
-          <Route exact path="/">
-            {/* home screen */}
-            <Home notes={notes} />
+        <Routes>
+          {/* home screen */}
+          <Route exact path="/" element={<Home notes={notes} />}>
+            
+            {/* note screen */}
+            {notes.map((note, index) => (
+              <Route path={note.name} key={index} element={<Note {...note} />}/>
+            ))}
+          
           </Route>
-
-          {notes.map((note, index) => (
-            <Route path={"/" + note.name} key={index}>
-              {/* note screen */}
-              <Note {...note} />
-            </Route>
-          ))}
-
-          <Route path="*">
-            {/* error screen */}
-            <Error />
-          </Route>
-        </Switch>
+          {/* error screen */}
+          <Route path="*" element={<Error />}/>
+            
+        </Routes>
       </main>
     </Router>
   );

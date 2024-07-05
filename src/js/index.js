@@ -1,3 +1,6 @@
 import App from "./app.js";
 import notes from "./data.js";
-ReactDOM.render(<App notes={notes} />, document.getElementById("root"));
+
+const rootElement = document.getElementById("root");
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App notes={notes} />);
