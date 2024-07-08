@@ -6,6 +6,7 @@ const notesList = [
   "git-basics",
   "git-remote",
   "npm",
+  "nodejs"
 ];
 
 export default notesList;
